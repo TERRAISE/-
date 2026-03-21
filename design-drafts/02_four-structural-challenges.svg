@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#1a1a2e" font-size="22" font-weight="700">中堅製造業が直面する「AI推進の4つの壁」</text>
+  <rect x="300" y="55" width="200" height="3" fill="#0077b6" rx="1.5"/>
+
+  <!-- Card 1: Top Left -->
+  <rect x="30" y="85" width="360" height="175" fill="#ffffff" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="30" y="85" width="360" height="6" fill="#e63946" rx="3" ry="0"/>
+  <!-- Number circle -->
+  <circle cx="65" cy="120" r="20" fill="#e63946" fill-opacity="0.1"/>
+  <text x="65" y="126" text-anchor="middle" fill="#e63946" font-size="18" font-weight="700">1</text>
+  <text x="95" y="126" fill="#1a1a2e" font-size="15" font-weight="700">スキルが社内に残らない</text>
+  <!-- Icon: circular arrows (repeat) -->
+  <g transform="translate(330, 115)" fill="none" stroke="#e63946" stroke-opacity="0.3" stroke-width="2">
+    <path d="M-5,-12 A14,14 0 1,1 -14,5"/>
+    <path d="M5,12 A14,14 0 1,1 14,-5"/>
+    <polygon points="-5,-12 -10,-6 0,-6" fill="#e63946" fill-opacity="0.3" stroke="none"/>
+    <polygon points="5,12 10,6 0,6" fill="#e63946" fill-opacity="0.3" stroke="none"/>
+  </g>
+  <text x="55" y="155" fill="#555555" font-size="12">
+    <tspan x="55" dy="0">年間数百万円の研修費を投じても</tspan>
+    <tspan x="55" dy="18">受講後にスキルが現場に定着せず、</tspan>
+    <tspan x="55" dy="18">同じ研修を繰り返す悪循環</tspan>
+  </text>
+  <!-- Visual: money flowing out -->
+  <g transform="translate(300, 200)" fill="#e63946" fill-opacity="0.15">
+    <text font-size="20">💴→💨</text>
+  </g>
+
+  <!-- Card 2: Top Right -->
+  <rect x="410" y="85" width="360" height="175" fill="#ffffff" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="410" y="85" width="360" height="6" fill="#f4a261" rx="3" ry="0"/>
+  <circle cx="445" cy="120" r="20" fill="#f4a261" fill-opacity="0.1"/>
+  <text x="445" y="126" text-anchor="middle" fill="#f4a261" font-size="18" font-weight="700">2</text>
+  <text x="475" y="126" fill="#1a1a2e" font-size="15" font-weight="700">外部依存の常態化</text>
+  <text x="435" y="155" fill="#555555" font-size="12">
+    <tspan x="435" dy="0">AI案件のたびに外部コンサルへ発注。</tspan>
+    <tspan x="435" dy="18">プロジェクト終了とともに知見が流出し、</tspan>
+    <tspan x="435" dy="18">自社にノウハウが蓄積されない</tspan>
+  </text>
+  <!-- Dependency chain visual -->
+  <g transform="translate(620, 210)">
+    <rect x="0" y="0" width="50" height="25" fill="#f4a261" fill-opacity="0.1" rx="4"/>
+    <text x="25" y="17" text-anchor="middle" fill="#f4a261" font-size="10">自社</text>
+    <line x1="50" y1="12" x2="80" y2="12" stroke="#f4a261" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="80" y="0" width="60" height="25" fill="#f4a261" fill-opacity="0.2" rx="4"/>
+    <text x="110" y="17" text-anchor="middle" fill="#f4a261" font-size="10">コンサル</text>
+  </g>
+
+  <!-- Card 3: Bottom Left -->
+  <rect x="30" y="280" width="360" height="175" fill="#ffffff" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="30" y="280" width="360" height="6" fill="#2a9d8f" rx="3" ry="0"/>
+  <circle cx="65" cy="315" r="20" fill="#2a9d8f" fill-opacity="0.1"/>
+  <text x="65" y="321" text-anchor="middle" fill="#2a9d8f" font-size="18" font-weight="700">3</text>
+  <text x="95" y="321" fill="#1a1a2e" font-size="15" font-weight="700">汎用研修では解決できない</text>
+  <text x="55" y="350" fill="#555555" font-size="12">
+    <tspan x="55" dy="0">ChatGPT等の汎用ツール中心の研修では</tspan>
+    <tspan x="55" dy="18">予知保全・品質管理など製造業固有の</tspan>
+    <tspan x="55" dy="18">領域をカバーできない</tspan>
+  </text>
+  <!-- Gap visual -->
+  <g transform="translate(100, 410)">
+    <rect x="0" y="0" width="80" height="22" fill="#2a9d8f" fill-opacity="0.1" rx="4"/>
+    <text x="40" y="15" text-anchor="middle" fill="#2a9d8f" font-size="9">汎用AI研修</text>
+    <text x="95" y="15" fill="#2a9d8f" fill-opacity="0.5" font-size="14">≠</text>
+    <rect x="110" y="0" width="80" height="22" fill="#2a9d8f" fill-opacity="0.2" rx="4"/>
+    <text x="150" y="15" text-anchor="middle" fill="#2a9d8f" font-size="9">製造業の課題</text>
+  </g>
+
+  <!-- Card 4: Bottom Right -->
+  <rect x="410" y="280" width="360" height="175" fill="#ffffff" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="410" y="280" width="360" height="6" fill="#264653" rx="3" ry="0"/>
+  <circle cx="445" cy="315" r="20" fill="#264653" fill-opacity="0.1"/>
+  <text x="445" y="321" text-anchor="middle" fill="#264653" font-size="18" font-weight="700">4</text>
+  <text x="475" y="321" fill="#1a1a2e" font-size="15" font-weight="700">大手企業との格差拡大</text>
+  <text x="435" y="350" fill="#555555" font-size="12">
+    <tspan x="435" dy="0">大手は2〜3年前からAX推進体制を構築。</tspan>
+    <tspan x="435" dy="18">2030年の人材不足を前に、</tspan>
+    <tspan x="435" dy="18">中堅企業にとって今が分岐点</tspan>
+  </text>
+  <!-- Gap widening visual -->
+  <g transform="translate(500, 405)">
+    <line x1="0" y1="15" x2="120" y2="5" stroke="#264653" stroke-opacity="0.4" stroke-width="2"/>
+    <line x1="0" y1="20" x2="120" y2="35" stroke="#264653" stroke-opacity="0.2" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="130" y="10" fill="#264653" font-size="9" fill-opacity="0.6">大手</text>
+    <text x="130" y="40" fill="#264653" font-size="9" fill-opacity="0.4">中堅</text>
+  </g>
+
+  <!-- Central connecting element -->
+  <circle cx="400" cy="270" r="25" fill="#0077b6" fill-opacity="0.08" stroke="#0077b6" stroke-opacity="0.2" stroke-width="1.5"/>
+  <text x="400" y="275" text-anchor="middle" fill="#0077b6" font-size="10" font-weight="600">課題</text>
+
+  <!-- Footer note -->
+  <text x="400" y="490" text-anchor="middle" fill="#999999" font-size="10">DESIGN DRAFT - 4カード構成: 各課題を色分けしたカードレイアウト</text>
+</svg>

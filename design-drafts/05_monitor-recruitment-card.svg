@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#162d50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="#f0f4f8"/>
+
+  <!-- Main card -->
+  <rect x="50" y="30" width="500" height="420" fill="url(#cardBg)" rx="16"/>
+
+  <!-- Accent stripe -->
+  <rect x="50" y="30" width="6" height="420" fill="#00b4d8" rx="3" ry="0"/>
+
+  <!-- Card header -->
+  <text x="90" y="75" fill="#00b4d8" font-size="12" font-weight="600" letter-spacing="3">MONITOR PROGRAM</text>
+  <text x="90" y="110" fill="#ffffff" font-size="28" font-weight="700">第1期モニター募集</text>
+  <text x="90" y="140" fill="#ffffff" fill-opacity="0.6" font-size="16">AX Academy — 製造業特化AI人材育成</text>
+
+  <!-- Divider -->
+  <line x1="90" y1="160" x2="510" y2="160" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- Details grid -->
+  <g fill="#ffffff" fill-opacity="0.5" font-size="11" font-weight="500">
+    <text x="90" y="195">募集人数</text>
+    <text x="90" y="240">対象</text>
+    <text x="90" y="295">受講形式</text>
+    <text x="90" y="335">モニター価格</text>
+    <text x="90" y="380">助成金活用</text>
+  </g>
+
+  <g fill="#ffffff" font-size="14">
+    <text x="220" y="195" font-weight="700" fill="#00b4d8" font-size="16">5名限定</text>
+    <text x="310" y="195" fill="#ffffff" fill-opacity="0.4" font-size="11">（先着・選考制）</text>
+
+    <text x="220" y="235" font-size="12">年商50〜500億円の中堅製造業</text>
+    <text x="220" y="253" font-size="12" fill-opacity="0.7">DX推進担当者・経営者・製造部門責任者</text>
+
+    <text x="220" y="295" font-size="12">完全オンライン・伴走型</text>
+    <text x="220" y="313" font-size="12" fill-opacity="0.7">（2ヶ月間）</text>
+
+    <!-- Price highlight -->
+    <text x="220" y="335" font-weight="700" font-size="22" fill="#00b4d8">60万円</text>
+    <text x="340" y="335" font-size="12" fill-opacity="0.7">/名（税別）</text>
+    <text x="220" y="355" font-size="11" fill-opacity="0.4"><tspan text-decoration="line-through">通常価格 100万円</tspan>  → 40%OFF</text>
+
+    <text x="220" y="380" font-size="12">人材開発支援助成金（最大75%補助）</text>
+    <text x="220" y="398" font-size="12" fill-opacity="0.7">教育訓練給付金（最大80%補助）</text>
+  </g>
+
+  <!-- CTA button -->
+  <rect x="90" y="415" width="200" height="22" fill="#00b4d8" rx="11"/>
+  <text x="190" y="430" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">まずは無料ヒアリングから →</text>
+
+  <!-- QR Code placeholder (right side) -->
+  <rect x="600" y="60" width="160" height="370" fill="#ffffff" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="680" y="100" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="600">お申し込みは</text>
+  <text x="680" y="118" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="600">こちらから</text>
+
+  <!-- QR placeholder box -->
+  <rect x="630" y="140" width="100" height="100" fill="#f0f0f0" rx="4" stroke="#cccccc" stroke-width="1"/>
+  <text x="680" y="195" text-anchor="middle" fill="#999999" font-size="10">QRコード</text>
+  <text x="680" y="210" text-anchor="middle" fill="#999999" font-size="8">（実際のURLから生成）</text>
+
+  <!-- Contact info -->
+  <line x1="630" y1="260" x2="730" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="680" y="285" text-anchor="middle" fill="#666666" font-size="10">株式会社TERRAISE</text>
+  <text x="680" y="300" text-anchor="middle" fill="#666666" font-size="10">AX Academy事業部</text>
+
+  <text x="680" y="330" text-anchor="middle" fill="#0077b6" font-size="10">ax@terraise.co.jp</text>
+
+  <text x="680" y="360" text-anchor="middle" fill="#888888" font-size="9">〒181-0012</text>
+  <text x="680" y="375" text-anchor="middle" fill="#888888" font-size="9">東京都三鷹市上連雀</text>
+  <text x="680" y="390" text-anchor="middle" fill="#888888" font-size="9">1-12-17</text>
+  <text x="680" y="405" text-anchor="middle" fill="#888888" font-size="9">三鷹ビジネスパーク B1F</text>
+
+  <!-- Footer -->
+  <text x="400" y="470" text-anchor="middle" fill="#999999" font-size="9">DESIGN DRAFT - ダークカード＋QRコード配置の募集概要カード</text>
+</svg>

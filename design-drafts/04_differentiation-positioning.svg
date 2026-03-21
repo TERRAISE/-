@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="520" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#1a1a2e" font-size="20" font-weight="700">AX Academyの差別化ポジション</text>
+  <text x="400" y="60" text-anchor="middle" fill="#666666" font-size="12">主要8社との比較における独自ポジション</text>
+
+  <!-- 2x2 Matrix -->
+  <!-- Axes -->
+  <line x1="120" y1="400" x2="680" y2="400" stroke="#333333" stroke-width="2"/>
+  <line x1="120" y1="400" x2="120" y2="90" stroke="#333333" stroke-width="2"/>
+  <!-- Arrow heads -->
+  <polygon points="680,400 670,395 670,405" fill="#333333"/>
+  <polygon points="120,90 115,100 125,100" fill="#333333"/>
+
+  <!-- Axis labels -->
+  <text x="400" y="430" text-anchor="middle" fill="#333333" font-size="13" font-weight="600">製造業への特化度 →</text>
+  <text x="85" y="250" text-anchor="middle" fill="#333333" font-size="13" font-weight="600" transform="rotate(-90,85,250)">伴走・実践度 →</text>
+
+  <!-- Quadrant labels (subtle) -->
+  <text x="250" y="115" text-anchor="middle" fill="#999999" font-size="10">汎用 × 伴走型</text>
+  <text x="550" y="115" text-anchor="middle" fill="#999999" font-size="10">製造業特化 × 伴走型</text>
+  <text x="250" y="385" text-anchor="middle" fill="#999999" font-size="10">汎用 × 座学型</text>
+  <text x="550" y="385" text-anchor="middle" fill="#999999" font-size="10">製造業特化 × 座学型</text>
+
+  <!-- Quadrant lines (dashed) -->
+  <line x1="400" y1="90" x2="400" y2="400" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="120" y1="245" x2="680" y2="245" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Competitor plots -->
+  <!-- Aidemy -->
+  <circle cx="220" cy="280" r="22" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="220" y="284" text-anchor="middle" fill="#64748b" font-size="9" font-weight="500">Aidemy</text>
+
+  <!-- キカガク -->
+  <circle cx="200" cy="310" r="20" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="314" text-anchor="middle" fill="#64748b" font-size="9" font-weight="500">キカガク</text>
+
+  <!-- SIGNATE -->
+  <circle cx="270" cy="330" r="18" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="270" y="334" text-anchor="middle" fill="#64748b" font-size="8" font-weight="500">SIGNATE</text>
+
+  <!-- Schoo -->
+  <circle cx="180" cy="360" r="18" fill="#94a3b8" fill-opacity="0.15" stroke="#94a3b8" stroke-width="1"/>
+  <text x="180" y="364" text-anchor="middle" fill="#64748b" font-size="9" font-weight="500">Schoo</text>
+
+  <!-- Udemy -->
+  <circle cx="240" cy="365" r="20" fill="#94a3b8" fill-opacity="0.15" stroke="#94a3b8" stroke-width="1"/>
+  <text x="240" y="369" text-anchor="middle" fill="#64748b" font-size="9" font-weight="500">Udemy</text>
+
+  <!-- Reskilling Camp -->
+  <circle cx="310" cy="290" r="18" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="310" y="285" text-anchor="middle" fill="#64748b" font-size="7" font-weight="500">Reskilling</text>
+  <text x="310" y="295" text-anchor="middle" fill="#64748b" font-size="7" font-weight="500">Camp</text>
+
+  <!-- ブレインパッド -->
+  <circle cx="520" cy="200" r="22" fill="#f4a261" fill-opacity="0.2" stroke="#f4a261" stroke-width="1.5"/>
+  <text x="520" y="196" text-anchor="middle" fill="#e76f51" font-size="7" font-weight="500">ブレイン</text>
+  <text x="520" y="208" text-anchor="middle" fill="#e76f51" font-size="7" font-weight="500">パッド</text>
+
+  <!-- DataRobot -->
+  <circle cx="560" cy="230" r="20" fill="#f4a261" fill-opacity="0.2" stroke="#f4a261" stroke-width="1.5"/>
+  <text x="560" y="234" text-anchor="middle" fill="#e76f51" font-size="8" font-weight="500">DataRobot</text>
+
+  <!-- AX Academy (highlighted) -->
+  <circle cx="600" cy="140" r="35" fill="#0077b6" fill-opacity="0.1" stroke="#0077b6" stroke-width="2.5"/>
+  <circle cx="600" cy="140" r="35" fill="none" stroke="#00b4d8" stroke-width="1" stroke-dasharray="3,3">
+    <animate attributeName="r" values="35;40;35" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="600" y="134" text-anchor="middle" fill="#0077b6" font-size="11" font-weight="700">AX</text>
+  <text x="600" y="148" text-anchor="middle" fill="#0077b6" font-size="11" font-weight="700">Academy</text>
+
+  <!-- Arrow pointing to AX Academy's unique position -->
+  <text x="640" y="120" fill="#0077b6" font-size="10" font-weight="600">唯一のポジション</text>
+
+  <!-- Legend -->
+  <rect x="50" y="450" width="700" height="55" fill="#ffffff" rx="8" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="90" cy="470" r="8" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="105" y="474" fill="#64748b" font-size="11">汎用AIスクール（Aidemy, キカガク, SIGNATE, Schoo, Udemy等）</text>
+  <circle cx="90" cy="492" r="8" fill="#f4a261" fill-opacity="0.2" stroke="#f4a261" stroke-width="1.5"/>
+  <text x="105" y="496" fill="#e76f51" font-size="11">製造業向けコンサルティング（ブレインパッド, DataRobot）</text>
+  <circle cx="530" cy="470" r="8" fill="#0077b6" fill-opacity="0.15" stroke="#0077b6" stroke-width="2"/>
+  <text x="545" y="474" fill="#0077b6" font-size="11" font-weight="600">AX Academy（製造業特化 × 伴走型実践）</text>
+
+  <!-- Footer -->
+  <text x="400" y="515" text-anchor="middle" fill="#999999" font-size="9">DESIGN DRAFT - 2軸ポジショニングマップ: 製造業特化度 × 伴走・実践度</text>
+</svg>
