@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社SYNNCA｜会社紹介資料</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --primary: #0A0F1E;
+    --accent: #2563EB;
+    --accent-light: #3B82F6;
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    --surface: #F8FAFC;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --gradient-start: #0A0F1E;
+    --gradient-end: #1E3A5F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Inter', -apple-system, sans-serif;
+    background: #0F172A;
+    color: var(--text);
+    overflow: hidden;
+  }
+
+  /* Slide Container */
+  .deck {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateX(40px);
+    padding: 60px 80px;
+  }
+
+  .slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* ===== SLIDE 1: COVER ===== */
+  .slide-cover {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .slide-cover::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-logo {
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #93C5FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cover-tagline {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 48px;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-light);
+    margin: 0 auto 48px;
+  }
+
+  .cover-title {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .cover-date {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 1px;
+  }
+
+  /* ===== COMMON SLIDE STYLES ===== */
+  .slide-light {
+    background: var(--white);
+  }
+
+  .slide-header {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 48px;
+  }
+
+  .slide-number {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .slide-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+
+  .slide-title-accent {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 16px;
+    border-radius: 2px;
+  }
+
+  .slide-body {
+    width: 100%;
+    max-width: 1100px;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* ===== SLIDE 2: ABOUT ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .about-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 36px;
+    border: 1px solid var(--border);
+  }
+
+  .about-card-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .about-card-value {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary);
+    line-height: 1.6;
+  }
+
+  .about-card-value small {
+    display: block;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-top: 8px;
+    line-height: 1.7;
+  }
+
+  .about-card.full {
+    grid-column: 1 / -1;
+  }
+
+  /* ===== SLIDE 3: STRENGTHS ===== */
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .strength-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s;
+  }
+
+  .strength-item:hover {
+    border-color: var(--accent-light);
+  }
+
+  .strength-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-glow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+    color: var(--accent);
+  }
+
+  .strength-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  .strength-text p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ===== SLIDE 4: SERVICE PLAN (Hero) ===== */
+  .slide-dark {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-dark::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .slide-dark .slide-number { color: #60A5FA; }
+  .slide-dark .slide-title { color: var(--white); }
+  .slide-dark .slide-title-accent { background: #60A5FA; }
+
+  .plan-hero {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .plan-price-block {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .plan-price-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .plan-price {
+    font-size: 72px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #FFFFFF 0%, #93C5FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  .plan-price-unit {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    margin-top: 8px;
+  }
+
+  .plan-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .plan-feature {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .plan-feature-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .plan-feature h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .plan-feature p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  /* ===== SLIDE 5: SERVICE DETAIL ===== */
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .detail-section {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid var(--border);
+  }
+
+  .detail-section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .detail-list {
+    list-style: none;
+  }
+
+  .detail-list li {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .detail-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* ===== SLIDE 6: TRACK RECORD ===== */
+  .record-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .record-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .record-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  }
+
+  .record-card-category {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .record-card-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .record-card-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .record-stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+  }
+
+  .record-stat {
+    text-align: center;
+  }
+
+  .record-stat-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .record-stat-label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* ===== SLIDE 7: CLOSING ===== */
+  .slide-closing {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-closing::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 60%);
+    border-radius: 50%;
+  }
+
+  .closing-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .closing-message {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .closing-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+
+  .closing-logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .closing-cta {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 16px 48px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 2px;
+  }
+
+  /* ===== NAVIGATION ===== */
+  .nav {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 10px 24px;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .nav-btn:hover { background: var(--accent); }
+
+  .nav-dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .nav-dot.active {
+    background: var(--accent-light);
+    transform: scale(1.3);
+  }
+
+  .nav-counter {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  /* ===== KEYBOARD HINT ===== */
+  .key-hint {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+    z-index: 100;
+  }
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <div class="slide slide-cover active" data-index="0">
+    <div class="cover-content">
+      <div class="cover-logo">SYNNCA</div>
+      <div class="cover-tagline">ONLINE &amp; HYBRID EVENT PRODUCTION</div>
+      <div class="cover-divider"></div>
+      <div class="cover-title">会社紹介資料</div>
+    </div>
+    <div class="cover-date">2026.04</div>
+  </div>
+
+  <!-- SLIDE 2: ABOUT -->
+  <div class="slide slide-light" data-index="1">
+    <div class="slide-header">
+      <div class="slide-number">01 &mdash; Company</div>
+      <div class="slide-title">
+        会社概要
+        <span class="slide-title-accent"></span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-label">Company Name</div>
+          <div class="about-card-value">株式会社SYNNCA</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-label">Business Domain</div>
+          <div class="about-card-value">
+            オンライン・ハイブリッドイベント
+            <small>設計 / 配信 / 収録</small>
+          </div>
+        </div>
+        <div class="about-card full">
+          <div class="about-card-label">Mission</div>
+          <div class="about-card-value">
+            オンライン・ハイブリッドイベントの設計・配信・収録のプロフェッショナル集団として、
+            <small>現地参加とオンライン視聴の双方に最高の体験価値を提供し、お客様のメッセージを確実に届けます。</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: STRENGTHS -->
+  <div class="slide slide-light" data-index="2">
+    <div class="slide-header">
+      <div class="slide-number">02 &mdash; Strengths</div>
+      <div class="slide-title">
+        SYNNCAの強み
+        <span class="slide-title-accent"></span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="strengths-grid">
+        <div class="strength-item">
+          <div class="strength-icon">&#9670;</div>
+          <div class="strength-text">
+            <h3>200現場以上の実績</h3>
+            <p>多種多様なイベント形式に対応してきた豊富な経験とノウハウの蓄積。あらゆるトラブルに即座に対応できる現場力。</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon">&#9671;</div>
+          <div class="strength-text">
+            <h3>「見せ方・構成」の提案力</h3>
+            <p>単なるオペレーションではなく、視聴者体験を設計。コンテンツの魅力を最大化する演出・構成をご提案します。</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon">&#9672;</div>
+          <div class="strength-text">
+            <h3>少人数精鋭の柔軟対応</h3>
+            <p>少人数体制だからこそ実現する迅速な意思決定と、お客様の要望に寄り添った柔軟なオペレーション。</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon">&#9673;</div>
+          <div class="strength-text">
+            <h3>ワンストップ提供</h3>
+            <p>企画段階の配信設計から、当日の設営・スイッチング・音声調整・撤収まで。すべてを一貫してお任せいただけます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: SERVICE PLAN (Hero Pricing) -->
+  <div class="slide slide-dark" data-index="3">
+    <div class="slide-header">
+      <div class="slide-number">03 &mdash; Service Plan</div>
+      <div class="slide-title">
+        標準サービスプラン
+        <span class="slide-title-accent"></span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="plan-hero">
+        <div class="plan-price-block">
+          <div class="plan-price-label">Standard Package</div>
+          <div class="plan-price">35〜40万円</div>
+          <div class="plan-price-unit">税別 / 1現場あたり</div>
+        </div>
+        <div class="plan-features">
+          <div class="plan-feature">
+            <div class="plan-feature-icon">&#9881;</div>
+            <h4>配信設計</h4>
+            <p>イベントの目的・規模に最適な配信構成をゼロから設計</p>
+          </div>
+          <div class="plan-feature">
+            <div class="plan-feature-icon">&#9655;</div>
+            <h4>現場オペレーション</h4>
+            <p>設営・撤収・スイッチング・音声調整をプロが一括対応</p>
+          </div>
+          <div class="plan-feature">
+            <div class="plan-feature-icon">&#9881;</div>
+            <h4>機材費一式込み</h4>
+            <p>カメラ・スイッチャー・音声機材など必要機材をすべて含む</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: SERVICE DETAIL -->
+  <div class="slide slide-light" data-index="4">
+    <div class="slide-header">
+      <div class="slide-number">04 &mdash; Details</div>
+      <div class="slide-title">
+        サービス内容詳細
+        <span class="slide-title-accent"></span>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="detail-grid">
+        <div class="detail-section">
+          <h3>パッケージに含まれるもの</h3>
+          <ul class="detail-list">
+            <li>事前ヒアリング・配信設計</li>
+            <li>現場設営・撤収作業</li>
+            <li>リアルタイムスイッチング</li>
+            <li>音声調整・モニタリング</li>
+            <li>配信機材一式（カメラ・スイッチャー・マイク等）</li>
+            <li>テスト配信・リハーサル対応</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h3>対応領域</h3>
+          <ul class="detail-list">
+            <li>記者発表・プレスカンファレンス</li>
+            <li>企業セミナー・ウェビナー</li>
+            <li>周年イベント・式典</li>
+            <li>ハイブリッドカンファレンス</li>
+            <li>社内全社ミーティング</li>
+            <li>IR説明会・株主総会配信</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h3>プランの特徴</h3>
+          <ul class="detail-list">
+            <li>少人数体制によるコスト最適化</li>
+            <li>柔軟なカスタマイズ対応</li>
+            <li>明朗会計 &mdash; 追加費用なし</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h3>オプション</h3>
+          <ul class="detail-list">
+            <li>多カメラ追加</li>
+            <li>収録・アーカイブ配信</li>
+            <li>テロップ・グラフィック演出</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: TRACK RECORD -->
+  <div class="slide slide-light" data-index="5">
+    <div class="slide-header">
+      <div class="slide-number">05 &mdash; Track Record</div>
+      <div class="slide-title">
+        実績
+        <span class="slide-title-accent"></span>
+      </div>
+    </div>
+    <div class="slide-body" style="flex-direction: column; justify-content: flex-start; gap: 32px;">
+      <div class="record-grid">
+        <div class="record-card">
+          <div class="record-card-category">Education</div>
+          <div class="record-card-name">武蔵野大学</div>
+          <div class="record-card-desc">大学イベント・講演会のオンライン配信対応</div>
+        </div>
+        <div class="record-card">
+          <div class="record-card-category">Financial / ESG</div>
+          <div class="record-card-name">MUFG ICJ<br>ESG ACCELERATOR</div>
+          <div class="record-card-desc">ESG領域のアクセラレータープログラム配信</div>
+        </div>
+        <div class="record-card">
+          <div class="record-card-category">Enterprise</div>
+          <div class="record-card-name">大企業全社セミナー</div>
+          <div class="record-card-desc">数百名規模の全社向けセミナー配信</div>
+        </div>
+      </div>
+      <div class="record-stat-row">
+        <div class="record-stat">
+          <div class="record-stat-number">200+</div>
+          <div class="record-stat-label">累計対応現場数</div>
+        </div>
+        <div class="record-stat">
+          <div class="record-stat-number">100%</div>
+          <div class="record-stat-label">配信成功率</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: CLOSING -->
+  <div class="slide slide-closing" data-index="6">
+    <div class="closing-content">
+      <div class="closing-message">
+        現地とオンラインの<br>体験価値を最大化する
+      </div>
+      <div class="closing-sub">
+        プロフェッショナルな配信品質と最適なコストで、<br>
+        お客様のイベントを成功に導きます。
+      </div>
+      <div class="closing-cta">お問い合わせ・ご相談はこちら</div>
+      <br><br>
+      <div class="closing-logo">SYNNCA</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Navigation -->
+<div class="nav" id="nav">
+  <button class="nav-btn" id="prevBtn">&#8592;</button>
+  <div class="nav-dots" id="navDots"></div>
+  <span class="nav-counter" id="navCounter">1 / 7</span>
+  <button class="nav-btn" id="nextBtn">&#8594;</button>
+</div>
+<div class="key-hint">&#8592; &#8594; Arrow Keys to Navigate</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+
+  // Build dots
+  const dotsContainer = document.getElementById('navDots');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(index) {
+    if (index < 0 || index >= totalSlides || index === current) return;
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+    document.getElementById('navCounter').textContent = (current + 1) + ' / ' + totalSlides;
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+  });
+</script>
+
+</body>
+</html>
